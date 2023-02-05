@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void change_array(int* data);
-void print_array(int data[]);
+void change_array(int* array);
+void print_array(int array[]);
 
 int main(void)
 {
@@ -29,15 +29,15 @@ int main(void)
     return 0;
 }
 
-void change_array(int* data)
+void change_array(int* array)
 {
-    data[0] = 0;
-    data[1] = 0;
+    array[0] = 0;
+    array[1] = 0;
 }
 
-void print_array(int data[])
+void print_array(int array[])
 {
     for (int i = 0; i < 10; i++) {
-        printf("%p:%d\n", &data[i], data[i]);
+        printf("%p:%d\n", &array[i], array[i]);
     }
 }
